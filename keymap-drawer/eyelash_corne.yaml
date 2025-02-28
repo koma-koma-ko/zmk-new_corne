@@ -26,8 +26,8 @@ layers:
   - J
   - K
   - L
+  - {t: '-', s: _}
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -41,7 +41,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '-', s: _}
+  - {t: '''', s: '"'}
   - LGUI
   - '&td1'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
@@ -132,7 +132,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Ctl+0, s: Ctl+)}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - _
   - +
@@ -248,5 +248,3 @@ combos:
 - p: [44, 45]
   k: Sys
   l: [QWERTY]
-- p: [13, 44]
-  k: Ctl+$$mdi:keyboard-space$$
