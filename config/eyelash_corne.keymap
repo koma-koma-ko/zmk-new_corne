@@ -39,18 +39,18 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&mo 4>;
+            bindings = <&kp LEFT_GUI>, <&mo 4>;
 
-            label = "1-4";
+            label = "win-4";
         };
 
         td2: td2 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 4>;
+            bindings = <&kp RIGHT_ALT>, <&mo 4>;
 
-            label = "2-4";
+            label = "alt-4";
         };
     };
 
@@ -84,10 +84,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                                    &kp C_PP                &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G                      &kp C_REWIND  &kp ENTER     &kp C_FF  &kp H        &kp J  &kp K      &kp L    &kp MINUS  &kp SEMI
-&td0       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp C_MUTE                  &kp C_REPEAT            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp SQT
-                         &kp LGUI  &td1   &lt 3 SPACE                                                      &lt 3 ENTER  &td2   &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E  &kp R             &kp T                                        &kp C_PP                        &kp Y        &kp U             &kp I      &kp O    &kp P      &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D  &kp F             &kp G                      &kp LC(UP_ARROW)  &kp ENTER  &kp LC(RIGHT_ARROW)  &kp H        &kp J             &kp K      &kp L    &kp MINUS  &kp SEMI
+&td0       &kp Z  &kp X  &kp C  &kp V             &kp B        &kp C_MUTE                      &kp LC(T)                       &kp N        &kp M             &kp COMMA  &kp DOT  &kp FSLH   &kp SQT
+                         &td1   &lt 1 LANGUAGE_5  &lt 3 SPACE                                                                  &lt 3 ENTER  &lt 2 LANGUAGE_5  &td2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -96,10 +96,10 @@
         number_layer {
             display-name = "NUMBER";
             bindings = <
-&kp TAB    &mkp RCLK       &mkp MCLK       &mkp LCLK     &mkp MB4        &mkp MB5                                  &mmv MOVE_UP                     &kp COMMA  &kp N7     &kp N8     &kp N9  &kp DEL    &kp BSPC
-&kp LCTRL  &mt PG_UP HOME  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOT    &kp N4     &kp N5     &kp N6  &kp PLUS   &kp ASTRK
-&td0       &mt PG_DN END   &kp QUESTION    &kp EXCL      &kp PERCENT     &kp BSLH         &none                    &mmv MOVE_DOWN                   &kp N0     &kp N1     &kp N2     &kp N3  &kp MINUS  &kp SLASH
-                                           &trans        &trans          &trans                                                                     &trans     &kp SPACE  &kp EQUAL
+&kp TAB    &mkp RCLK       &mkp MCLK       &mkp LCLK     &mkp MB4        &mkp MB5                                  &mmv MOVE_UP                     &kp COMMA  &kp N7   &kp N8     &kp N9  &kp N0     &kp BSPC
+&kp LCTRL  &mt PG_UP HOME  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOT    &kp N4   &kp N5     &kp N6  &kp PLUS   &kp ASTRK
+&td0       &mt PG_DN END   &kp QUESTION    &kp EXCL      &kp PERCENT     &kp BSLH         &none                    &mmv MOVE_DOWN                   &kp SPACE  &kp N1   &kp N2     &kp N3  &kp MINUS  &kp SLASH
+                                           &trans        &trans          &trans                                                                     &trans     &kp DEL  &kp EQUAL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -108,10 +108,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp AT                                   &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp HASH  &kp DOLLAR  &none      &kp BSPC
-&trans  &trans  &trans  &kp LPAR  &kp RPAR  &kp UNDER                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &none     &none     &none       &kp BSLH   &kp GRAVE
-&trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp MINUS  &kp LC(N0)                    &mmv MOVE_DOWN                   &none      &none     &none     &none       &kp TILDE  &kp ESC
-                        &trans    &trans    &kp SPACE                                                                 &kp RET    &trans    &trans
+&trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp AT                                   &mmv MOVE_UP                     &kp CARET  &kp AMPS      &kp HASH  &kp DOLLAR  &none      &kp BSPC
+&trans  &trans  &trans  &kp LPAR  &kp RPAR  &kp MINUS                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EXCL      &none     &none       &kp BSLH   &kp GRAVE
+&trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp UNDER  &kp LC(N0)                    &mmv MOVE_DOWN                   &kp UNDER  &kp QUESTION  &none     &none       &kp TILDE  &kp ESC
+                        &trans    &trans    &kp SPACE                                                                 &kp RET    &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
@@ -136,15 +136,6 @@
 &out OUT_USB     &bt BT_CLR_ALL   &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2              &trans  &trans  &trans  &trans           &trans           &trans           &trans           &trans           &trans
 &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none            &trans          &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &trans
                                                    &trans           &trans           &trans                                            &trans           &trans           &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
     };
