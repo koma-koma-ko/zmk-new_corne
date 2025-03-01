@@ -85,8 +85,8 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp MINUS  &kp SEMI
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp SQT
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp MINUS  &kp SEMI
+&td0       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp SQT
                          &kp LGUI  &td1   &lt 3 SPACE                                                &lt 3 ENTER  &td2   &kp RALT
             >;
 
@@ -96,10 +96,10 @@
         number_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                           &mmv MOVE_UP                     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0    &kp BSPC
-&trans  &trans  &trans  &trans  &trans  &trans           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp HOME  &kp PG_UP
-&trans  &trans  &trans  &trans  &trans  &trans  &none                    &mmv MOVE_DOWN                   &trans    &trans    &trans  &trans     &kp END   &kp PG_DN
-                        &trans  &trans  &trans                                                            &trans    &kp DEL   &trans
+&kp TAB    &mkp RCLK       &mkp MCLK       &mkp LCLK     &mkp MB4        &mkp MB5                                  &mmv MOVE_UP                     &kp COMMA  &kp N7     &kp N8     &kp N9  &kp DEL    &kp BSPC
+&kp LCTRL  &mt PG_UP HOME  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp DOT    &kp N4     &kp N5     &kp N6  &kp PLUS   &kp ASTRK
+&td0       &mt PG_DN END   &kp QUESTION    &kp EXCL      &kp PERCENT     &kp BSLH         &none                    &mmv MOVE_DOWN                   &kp N0     &kp N1     &kp N2     &kp N3  &kp MINUS  &kp SLASH
+                                           &trans        &trans          &trans                                                                     &trans     &kp SPACE  &kp EQUAL
             >;
 
             sensor-bindings = <&scroll_encoder>;
