@@ -84,10 +84,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                                &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp MINUS  &kp SEMI
-&td0       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp SQT
-                         &kp LGUI  &td1   &lt 3 SPACE                                                &lt 3 ENTER  &td2   &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                                    &kp C_PP                &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G                      &kp C_REWIND  &kp ENTER     &kp C_FF  &kp H        &kp J  &kp K      &kp L    &kp MINUS  &kp SEMI
+&td0       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp C_MUTE                  &kp C_REPEAT            &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp SQT
+                         &kp LGUI  &td1   &lt 3 SPACE                                                      &lt 3 ENTER  &td2   &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -108,10 +108,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                                &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR   &kp BSPC
-&trans  &trans    &trans  &trans    &trans    &trans                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH   &kp GRAVE
-&trans  &trans    &trans  &trans    &trans    &trans     &kp LC(N0)                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp TILDE  &kp ESC
-                          &trans    &trans    &kp SPACE                                                                 &kp RET    &trans     &trans
+&trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp AT                                   &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp HASH  &kp DOLLAR  &none      &kp BSPC
+&trans  &trans  &trans  &kp LPAR  &kp RPAR  &kp UNDER                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none      &none     &none     &none       &kp BSLH   &kp GRAVE
+&trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp MINUS  &kp LC(N0)                    &mmv MOVE_DOWN                   &none      &none     &none     &none       &kp TILDE  &kp ESC
+                        &trans    &trans    &kp SPACE                                                                 &kp RET    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
@@ -120,13 +120,13 @@
         function_layer {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp LC(N0)                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &trans           &trans
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                             &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &none                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &trans           &trans
+                                       &trans       &trans     &trans                                                              &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP LC(C_BRI_DN)>;
         };
 
         system_layer {
@@ -136,6 +136,15 @@
 &out OUT_USB     &bt BT_CLR_ALL   &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2              &trans  &trans  &trans  &trans           &trans           &trans           &trans           &trans           &trans
 &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none            &trans          &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &trans
                                                    &trans           &trans           &trans                                            &trans           &trans           &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
     };
