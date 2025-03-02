@@ -7,15 +7,15 @@ layers:
   - R
   - T
   - $$mdi:play-pause$$
-  - {t: Y, h: Ctl+Y}
+  - Y
   - U
   - I
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-control$$
-  - {t: A, h: Ctl+A}
-  - {t: S, h: Ctl+S}
+  - A
+  - S
   - D
   - F
   - G
@@ -29,10 +29,10 @@ layers:
   - {t: '-', s: _}
   - {t: ;, s: ':'}
   - '&td0'
-  - {t: Z, h: Ctl+Z}
-  - {t: X, h: Ctl+X}
-  - {t: C, h: Ctl+C}
-  - {t: V, h: Ctl+V}
+  - Z
+  - X
+  - C
+  - V
   - B
   - $$mdi:volume-off$$
   - Ctl+T
@@ -50,11 +50,11 @@ layers:
   - '&td2'
   NUMBER:
   - $$mdi:keyboard-tab$$
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-left-click-outline$$
-  - '&mkp MB4'
-  - '&mkp MB5'
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: ',', s: <}
   - {t: '7', s: '&'}
