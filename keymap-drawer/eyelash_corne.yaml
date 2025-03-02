@@ -14,7 +14,7 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-control$$
-  - A
+  - {t: A, h: Ctl+A}
   - S
   - D
   - F
@@ -43,10 +43,10 @@ layers:
   - {t: /, s: '?'}
   - {t: '''', s: '"'}
   - '&td1'
-  - {t: Alt+`, h: NUMBER, s: Alt+~}
+  - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - {t: AltGr+`, h: SYMBOL, s: AltGr+~}
+  - SYMBOL
   - '&td2'
   NUMBER:
   - $$mdi:keyboard-tab$$
