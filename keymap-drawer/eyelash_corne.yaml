@@ -7,7 +7,7 @@ layers:
   - R
   - T
   - $$mdi:play-pause$$
-  - Y
+  - {t: Y, h: Ctl+Y}
   - U
   - I
   - O
@@ -15,7 +15,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-control$$
   - {t: A, h: Ctl+A}
-  - S
+  - {t: S, h: Ctl+S}
   - D
   - F
   - G
@@ -29,10 +29,10 @@ layers:
   - {t: '-', s: _}
   - {t: ;, s: ':'}
   - '&td0'
-  - Z
-  - X
-  - C
-  - V
+  - {t: Z, h: Ctl+Z}
+  - {t: X, h: Ctl+X}
+  - {t: C, h: Ctl+C}
+  - {t: V, h: Ctl+V}
   - B
   - $$mdi:volume-off$$
   - Ctl+T
