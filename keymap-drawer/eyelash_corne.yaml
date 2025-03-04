@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - {t: '''', s: '"'}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-control$$
   - A
   - S
@@ -27,7 +27,7 @@ layers:
   - K
   - L
   - {t: '-', s: _}
-  - {t: ;, s: ':'}
+  - $$mdi:backspace-reverse-outline$$
   - '&td0'
   - Z
   - X
@@ -110,7 +110,7 @@ layers:
   - F8
   - F9
   - F10
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-control$$
   - F11
   - F12
@@ -124,8 +124,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: ;, s: ':'}
+  - {t: '''', s: '"'}
   - '&td0'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
