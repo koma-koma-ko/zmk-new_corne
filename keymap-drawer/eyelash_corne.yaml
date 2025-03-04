@@ -19,9 +19,9 @@ layers:
   - D
   - F
   - G
-  - Ctl+HOME
+  - HOME
   - Alt+F4
-  - Ctl+END
+  - END
   - H
   - J
   - K
@@ -35,7 +35,7 @@ layers:
   - V
   - B
   - $$mdi:volume-off$$
-  - Ctl+PG DN
+  - PG DN
   - N
   - M
   - {t: ',', s: <}
